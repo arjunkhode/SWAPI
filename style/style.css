@@ -49,6 +49,7 @@ body {
   background: ghostwhite; }
 
 .aurebesh-menu {
+  display: none;
   font-family: 'Aurebesh';
   width: 100%;
   background: ghostwhite; }
