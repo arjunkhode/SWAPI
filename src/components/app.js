@@ -37,10 +37,22 @@ export default class App extends Component {
       	/>
 		<div className="menu-body-div">
 			<div className="english-menu">
-				english stuff
+				Choose
+				<ul>
+					<li>People</li>
+					<li>Planets</li>
+					<li>Vehicles</li>
+					<li>Starships</li>
+				</ul>
 			</div>
 			<div className="aurebesh-menu">
-				aurebesh stuff
+				Choose
+				<ul>
+					<li>People</li>
+					<li>Planets</li>
+					<li>Vehicles</li>
+					<li>Starships</li>
+				</ul>
 			</div>
 		</div>
 		{this.props.children}

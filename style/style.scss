@@ -58,18 +58,40 @@ body{
 	left: 0;
 	right: 0;
 	text-align: center;
+
+	ul{
+		list-style: none;
+		padding: 1em 0;
+	}
 }
 
 .english-menu{
 	display: none;
 	font-family: Baloo, arial;
 	background: ghostwhite;
+
+	ul{
+		li:hover{
+			background: azure;
+			color: lime;
+		}
+	}
 }
 
 .aurebesh-menu{
 	display: none;
 	font-family: 'Aurebesh';
-	background: ghostwhite;	
+	background: #0e0e0e;	
+	color: white;
+	line-height: 1.6;
+
+
+	ul{
+		li:hover{
+			background: #1e1e1e;
+			color: crimson;
+		}
+	}
 }
 
 @media only screen and (min-width: 620px){
