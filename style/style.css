@@ -15,6 +15,8 @@ body {
   justify-content: center;*/
   height: 100vh;
   width: 100vw;
+  margin: 0;
+  padding: 0;
   position: relative; }
 
 a {
@@ -32,9 +34,26 @@ a {
 
 .people {
   color: white;
-  background: midnightblue;
+  background: #1e1e1e;
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  margin: 0;
+  padding: 0; }
+
+.aurebesh-btn {
+  font-family: Baloo, arial;
+  font-weight: 100;
+  font-size: 14px;
+  background: crimson;
+  position: absolute;
+  border: none;
+  outline: none;
+  height: 3em;
+  width: 7em;
+  border-radius: 5px;
+  top: 1.5em;
+  right: 2em;
+  z-index: 2; }
 
 .menu-icon {
   position: absolute;
@@ -46,8 +65,11 @@ a {
 
 .menu-body-div {
   display: flex;
-  width: 100vw;
-  height: 100vh; }
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
 
 .english-menu, .aurebesh-menu {
   box-sizing: border-box;

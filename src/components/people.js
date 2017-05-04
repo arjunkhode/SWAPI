@@ -15,6 +15,7 @@ render() {
 	console.log("thisisit:",this.props);
 	return(
 		<div className="people">
+			<button className="aurebesh-btn">Aurebesh</button>
 			<ul>
 				Hey there wassaup
 				
