@@ -8,8 +8,8 @@ export const FETCH_PLANETS = 'FETCH_PLANETS';
 const ROOT_URL = 'http://swapi.co/api';
 
 export function fetchPeople() {
-	const request = axios.get(`${ROOT_URL}/people`);
-	//request.then(data => data.json()).then((data)=>{console.log(data)});
+	const request = axios.get(`${ROOT_URL}/people/`);
+	// request.then(data => data.json()).then((data)=>{console.log("action!",data)});
 	return {
 		type: FETCH_PEOPLE,
 		payload: request,

@@ -1,24 +1,42 @@
 import React from 'react';
+import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { fetchPeople } from '../actions/index';
 
 class People extends React.Component{
 
+constructor(){
+	super();
+	this.renderPeople = this.renderPeople.bind(this);
+}
+
 componentDidMount(){
 	this.props.fetchPeople();
-	// console.log(this.props.items);
 	// let peopleData = {};
 	// stuff.payload.then(data => data.json()).then((data) => {peopleData = data});
+}
+
+renderPeople(peopleprops){
+	// console.log("lee",peopleprops.items.results);
+	if(peopleprops.items.results){
+		
+		if(peopleprops.items.results.length)
+
+		return peopleprops.items.results.map((person) => {
+			return(
+			<li key={person.name} className="result"> {person.name} </li>
+			) });
+	}
+					
 }
 
 render() {
 	console.log("thisisit:",this.props);
 	return(
 		<div className="people">
-			<button className="aurebesh-btn">Aurebesh</button>
-			<ul>
-				Hey there wassaup
-				
+			<button className="aurebesh-btn" onClick={this.makeAurebesh}> Aurebesh</button>
+			<ul className="results">
+				{this.renderPeople(this.props)}
 			</ul>
 		</div>
 	);

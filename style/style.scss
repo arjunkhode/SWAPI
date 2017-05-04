@@ -47,8 +47,18 @@ a{
 	background: #1e1e1e;
 	width: 100vw;
 	height: 100vh;
+	overflow: auto;
 	margin: 0;
 	padding: 0;
+}
+
+ul.results{
+	text-align: center;
+	margin-top: 6em;
+}
+li.result{
+	font-family: Baloo, Arial;
+	font-size: 24px;
 }
 
 .aurebesh-btn{
