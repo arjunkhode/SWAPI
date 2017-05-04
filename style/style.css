@@ -16,6 +16,11 @@ body {
 .app-main {
   height: 100vh; }
 
+.logo {
+  height: 13vh;
+  display: block;
+  margin: 5vh auto; }
+
 .image1 {
   height: 80vh;
   display: block;
