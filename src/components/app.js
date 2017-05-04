@@ -12,13 +12,17 @@ export default class App extends Component {
   openMenu() {
   	const englishMenu = document.querySelector('.english-menu');
   	const aurebeshMenu = document.querySelector('.aurebesh-menu');
-  	// if menu does not have a display property, set it to block. If it does have one, set it to none
-  	englishMenu.style.display ? englishMenu.style.display = 'block' : englishMenu.style.display = 'none';
-  	// The previous  statement inverts the case. This statement inverts it again.
+  	// if menu does not have a display property, set it to none.
+  	if(!englishMenu.style.display) {
+  		englishMenu.style.display = 'none';
+  	}
+  	// Toggle the display of the menu
   	englishMenu.style.display ==='none' ? englishMenu.style.display = 'block' : englishMenu.style.display = 'none';
   	console.log(window.innerWidth);
   	if(window.innerWidth > 620) {
-  		aurebeshMenu.style.display ? aurebeshMenu.style.display = 'block' : aurebeshMenu.style.display = 'none';
+  	if(!aurebeshMenu.style.display) {
+  		aurebeshMenu.style.display = 'none';
+  	}
   		aurebeshMenu.style.display === 'none' ? aurebeshMenu.style.display = 'block' : aurebeshMenu.style.display = 'none';
   	}
   }
