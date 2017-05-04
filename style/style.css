@@ -57,9 +57,22 @@ body {
 .aurebesh-menu {
   display: none;
   font-family: 'Aurebesh';
-  width: 100%;
   background: ghostwhite; }
 
+@media only screen and (min-width: 620px) {
+  .menu-body-div {
+    justify-content: space-between; }
+
+  .english-menu, .aurebesh-menu {
+    flex: 0 1 20%; }
+
+  .english-menu {
+    left: 0;
+    right: 75vw; }
+
+  .aurebesh-menu {
+    left: 75vw;
+    right: 0; } }
 .logo {
   height: 13vh;
   display: block;
