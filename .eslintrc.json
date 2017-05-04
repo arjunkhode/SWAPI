@@ -1,0 +1,21 @@
+{
+    "extends": "airbnb",
+    "rules": {
+                    "import/extensions": 0,
+                    "react/jsx-filename-extension": 0,
+                    "import/no-unresolved": 0,
+                    "react/prefer-stateless-function": 0,
+                    "no-unused-vars": 1,
+                    "arrow-body-style":0,
+                    "no-tabs":0,
+                    "react/jsx-indent":0,
+                    "react/prop-types":1,
+                    "indent":1,
+                    "no-mixed-spaces-and-tabs":0
+                },
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "import"
+    ]
+}
