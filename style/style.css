@@ -17,10 +17,24 @@ body {
   width: 100vw;
   position: relative; }
 
+a {
+  text-decoration: none; }
+
 .app-main {
   height: 100vh;
   padding: 0;
   box-sizing: border-box; }
+
+.app-children {
+  height: 100vh;
+  width: 100vw;
+  color: white; }
+
+.people {
+  color: white;
+  background: midnightblue;
+  width: 100vw;
+  height: 100vh; }
 
 .menu-icon {
   position: absolute;
@@ -56,6 +70,8 @@ body {
   display: none;
   font-family: Baloo, arial;
   background: ghostwhite; }
+  .english-menu a {
+    color: black; }
   .english-menu ul li:hover {
     background: azure;
     color: lime; }
@@ -66,6 +82,8 @@ body {
   background: #0e0e0e;
   color: white;
   line-height: 1.6; }
+  .aurebesh-menu a {
+    color: white; }
   .aurebesh-menu ul li:hover {
     background: #1e1e1e;
     color: crimson; }

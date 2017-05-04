@@ -24,10 +24,27 @@ body{
 	position: relative;
 }
 
+a{
+	text-decoration: none;
+}
+
 .app-main{
 	height: 100vh;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+.app-children{
+	height: 100vh;
+	width: 100vw;
+	color: white;
+}
+
+.people{
+	color: white;
+	background: midnightblue;
+	width: 100vw;
+	height: 100vh;
 }
 
 .menu-icon{
@@ -69,6 +86,10 @@ body{
 	display: none;
 	font-family: Baloo, arial;
 	background: ghostwhite;
+	
+	a{
+		color: black;
+	}
 
 	ul{
 		li:hover{
@@ -85,6 +106,9 @@ body{
 	color: white;
 	line-height: 1.6;
 
+	a{
+		color: white;
+	}
 
 	ul{
 		li:hover{
