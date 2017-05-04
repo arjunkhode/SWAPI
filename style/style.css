@@ -30,9 +30,14 @@ body {
   width: auto;
   z-index: 2; }
 
+.menu-body-div {
+  display: flex;
+  width: 100vw;
+  height: 100vh; }
+
 .english-menu, .aurebesh-menu {
   box-sizing: border-box;
-  padding: 2em 1em;
+  padding: 0;
   text-overflow: ellipsis;
   whitespace: nowrap;
   overflow: hidden;
@@ -40,12 +45,13 @@ body {
   position: absolute;
   top: 5em;
   bottom: 0;
+  left: 0;
+  right: 0;
   text-align: center; }
 
 .english-menu {
   display: none;
   font-family: Baloo, arial;
-  width: 100%;
   background: ghostwhite; }
 
 .aurebesh-menu {
