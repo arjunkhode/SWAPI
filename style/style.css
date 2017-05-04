@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo");
+@font-face {
+  font-family: "Aurebesh";
+  src: url("../src/assets/aurebesh/Aurebesh Bold.ttf"); }
 * {
   margin: 0;
   padding: 0; }
@@ -14,12 +18,48 @@ body {
   position: relative; }
 
 .app-main {
-  height: 100vh; }
+  height: 100vh;
+  padding: 0;
+  box-sizing: border-box; }
+
+.menu-icon {
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  height: 2em;
+  width: auto;
+  z-index: 2; }
+
+.english-menu, .aurebesh-menu {
+  box-sizing: border-box;
+  padding: 2em 1em;
+  text-overflow: ellipsis;
+  whitespace: nowrap;
+  overflow: hidden;
+  z-index: 3;
+  position: absolute;
+  top: 5em;
+  bottom: 0;
+  text-align: center; }
+
+.english-menu {
+  display: none;
+  font-family: Baloo, arial;
+  width: 100%;
+  background: ghostwhite; }
+
+.aurebesh-menu {
+  font-family: 'Aurebesh';
+  width: 100%;
+  background: ghostwhite; }
 
 .logo {
   height: 13vh;
   display: block;
-  margin: 5vh auto; }
+  left: 50%;
+  top: 5vh;
+  transform: translate(-50%, 0);
+  position: fixed; }
 
 .image1 {
   height: 80vh;
