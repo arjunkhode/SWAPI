@@ -6,17 +6,18 @@ class People extends React.Component{
 
 componentDidMount(){
 	this.props.fetchPeople();
-	console.log(this.props.items);
+	// console.log(this.props.items);
 	// let peopleData = {};
 	// stuff.payload.then(data => data.json()).then((data) => {peopleData = data});
 }
 
 render() {
+	console.log("thisisit:",this.props);
 	return(
 		<div className="people">
 			<ul>
 				Hey there wassaup
-				{this.props.items}
+				
 			</ul>
 		</div>
 	);
@@ -27,4 +28,4 @@ function mapStateToProps(state) {
 	return { items: state.items.all };
 }
 
-export default connect(null,{fetchPeople})(People);
+export default connect( mapStateToProps ,{fetchPeople})(People);
