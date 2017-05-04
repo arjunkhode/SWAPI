@@ -4,8 +4,8 @@ import { fetchPeople } from '../actions/index';
 
 class People extends React.Component{
 
-componentWillMount(){
-	fetchPeople();
+componentDidMount(){
+	this.props.fetchPeople();
 	console.log(this.props.items);
 	// let peopleData = {};
 	// stuff.payload.then(data => data.json()).then((data) => {peopleData = data});
@@ -27,4 +27,4 @@ function mapStateToProps(state) {
 	return { items: state.items.all };
 }
 
-export default connect(mapStateToProps, { fetchPeople })(People);
+export default connect(null,{fetchPeople})(People);

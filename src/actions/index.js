@@ -7,10 +7,10 @@ const ROOT_URL = 'http://swapi.co/api';
 
 export function fetchPeople() {
 	const request = fetch(`${ROOT_URL}/people`);
-	let result = request.then(data=>data.json());
+	request.then(data => data.json()).then((data)=>{console.log(data)});
 	return {
 		type: FETCH_PEOPLE,
-		payload: result,
+		payload: request,
 	};
 }
 export function fetchVehicles() {
