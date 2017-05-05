@@ -4,8 +4,17 @@ export const FETCH_PEOPLE = 'FETCH_PEOPLE';
 export const FETCH_VEHICLES = 'FETCH_VEHICLES';
 export const FETCH_STARSHIPS = 'FETCH_STARSHIPS';
 export const FETCH_PLANETS = 'FETCH_PLANETS';
+export const SWAP_LANGUAGE = 'SWAP_LANGUAGE';
 
 const ROOT_URL = 'http://swapi.co/api';
+
+export function swapLanguage(lang) {
+	// console.log("I swapped the language, action, the new lang is",lang);
+	return {
+		type: SWAP_LANGUAGE,
+		payload: lang,
+	};
+}
 
 export function fetchPeople() {
 	const request = axios.get(`${ROOT_URL}/people/`);

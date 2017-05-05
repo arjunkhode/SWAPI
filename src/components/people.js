@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { fetchPeople } from '../actions/index';
+import { swapLanguage } from '../actions/index';
 
 class People extends React.Component{
 
@@ -20,15 +21,22 @@ componentDidMount(){
 
 makeAurebesh(){
 	const resultsdiv = document.querySelector('ul.results');
-	if(this.language === 'english'){
+	// console.log("The current language from the state is:", this.props.language);
+	if(this.props.language === 'english'){
 		resultsdiv.style.fontFamily = "Aurebesh, Arial";
 		resultsdiv.style.lineHeight = 1.6;
 
-		this.language = 'aurebesh';
+		// this.language = 'aurebesh';
+		// console.log("state lang was:",this.props.language);
+		this.props.swapLanguage('aurebesh');
 	}
 	else{
 		resultsdiv.style.fontFamily = "Baloo, Arial";
-		this.language = 'english';
+		// this.language = 'english';
+		console.log("state lang was:",this.props.language);
+		this.props.swapLanguage('english');
+		console.log("state lang was:",this.props.language);
+
 	}
 }
 
@@ -60,7 +68,7 @@ render() {
 }
 
 function mapStateToProps(state) {
-	return { items: state.items.all };
+	return { items: state.items.all, language: state.language.lang };
 }
 
-export default connect( mapStateToProps ,{fetchPeople})(People);
+export default connect(mapStateToProps, { fetchPeople, swapLanguage })(People);
