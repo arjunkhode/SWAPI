@@ -8,12 +8,28 @@ class People extends React.Component{
 constructor(){
 	super();
 	this.renderPeople = this.renderPeople.bind(this);
+	this.makeAurebesh = this.makeAurebesh.bind(this);
+	this.language = 'english';
 }
 
 componentDidMount(){
 	this.props.fetchPeople();
 	// let peopleData = {};
 	// stuff.payload.then(data => data.json()).then((data) => {peopleData = data});
+}
+
+makeAurebesh(){
+	const resultsdiv = document.querySelector('ul.results');
+	if(this.language === 'english'){
+		resultsdiv.style.fontFamily = "Aurebesh, Arial";
+		resultsdiv.style.lineHeight = 1.6;
+
+		this.language = 'aurebesh';
+	}
+	else{
+		resultsdiv.style.fontFamily = "Baloo, Arial";
+		this.language = 'english';
+	}
 }
 
 renderPeople(peopleprops){

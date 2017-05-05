@@ -42,11 +42,11 @@ a {
   padding: 0; }
 
 ul.results {
+  font-family: Baloo, Arial;
   text-align: center;
   margin-top: 6em; }
 
 li.result {
-  font-family: Baloo, Arial;
   font-size: 24px; }
 
 .aurebesh-btn {
