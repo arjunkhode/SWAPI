@@ -14,7 +14,6 @@ constructor(){
 	this.prevPage = this.prevPage.bind(this);
 	this.nextPage = this.nextPage.bind(this);
 	this.language = 'english';
-	this.trial = this.trial.bind(this);
 }
 
 componentDidMount(){
@@ -45,23 +44,24 @@ makeAurebesh(){
 
 prevPage(){
 	let currentPage = this.props.currentPage;
-	console.log("CUrrent page is:",this.props.currentPage);
+	// console.log("CUrrent page is:",this.props.currentPage);
 	if (this.props.currentPage - 1 > 0) {
 	this.props.setPage(this.props.currentPage-1);
 	this.props.fetchPeople(this.props.currentPage-1);
 	}
-	console.log("The new page is 1 more than above");
-}
-nextPage(){
-	let currentPage = this.props.currentPage;
-	console.log("CUrrent page is:",this.props.currentPage);
-	this.props.setPage(this.props.currentPage+1);
-	this.props.fetchPeople(this.props.currentPage+1);
-	console.log("The new page is 1 more than above");
+	// console.log("The new page is 1 less than above");
 }
 
-trial(){
-	console.log("For the trial");
+nextPage(){
+	let maxCount = this.props.items.count;
+	// console.log(maxCount);
+	let currentPage = this.props.currentPage;
+	// console.log("CUrrent page is:",this.props.currentPage);
+	if(currentPage+1 <= Math.floor(maxCount/10)){
+		this.props.setPage(this.props.currentPage+1);
+		this.props.fetchPeople(this.props.currentPage+1);
+	}
+	// console.log("The new page is 1 more than above");
 }
 
 renderPeople(peopleprops){
@@ -79,7 +79,7 @@ renderPeople(peopleprops){
 }
 
 render() {
-	// console.log("thisisit:",this.props);
+	console.log("thisisit:",this.props);
 	return(
 		<div className="people">
 			<button className="aurebesh-btn" onClick={this.makeAurebesh}> Aurebesh</button>
