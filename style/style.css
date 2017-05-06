@@ -17,7 +17,8 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
-  position: relative; }
+  position: relative;
+  font-family: Baloo, arial; }
 
 a {
   text-decoration: none; }
@@ -39,7 +40,8 @@ a {
   height: 100vh;
   overflow: auto;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  z-index: 2; }
 
 ul.results {
   font-family: Baloo, Arial;
@@ -48,6 +50,17 @@ ul.results {
 
 li.result {
   font-size: 24px; }
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  font-size: 26px; }
+  .nav .prev, .nav .next {
+    padding: 0.5em;
+    z-index: 3;
+    cursor: pointer; }
 
 .aurebesh-btn {
   font-family: Baloo, arial;

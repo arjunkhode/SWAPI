@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { fetchPeople } from '../actions/index';
 import { swapLanguage } from '../actions/index';
+import { setPage } from '../actions/index';
 
 class People extends React.Component{
 
@@ -10,7 +11,10 @@ constructor(){
 	super();
 	this.renderPeople = this.renderPeople.bind(this);
 	this.makeAurebesh = this.makeAurebesh.bind(this);
+	this.prevPage = this.prevPage.bind(this);
+	this.nextPage = this.nextPage.bind(this);
 	this.language = 'english';
+	this.trial = this.trial.bind(this);
 }
 
 componentDidMount(){
@@ -36,8 +40,28 @@ makeAurebesh(){
 		console.log("state lang was:",this.props.language);
 		this.props.swapLanguage('english');
 		console.log("state lang was:",this.props.language);
-
 	}
+}
+
+prevPage(){
+	let currentPage = this.props.currentPage;
+	console.log("CUrrent page is:",this.props.currentPage);
+	if (this.props.currentPage - 1 > 0) {
+	this.props.setPage(this.props.currentPage-1);
+	this.props.fetchPeople(this.props.currentPage-1);
+	}
+	console.log("The new page is 1 more than above");
+}
+nextPage(){
+	let currentPage = this.props.currentPage;
+	console.log("CUrrent page is:",this.props.currentPage);
+	this.props.setPage(this.props.currentPage+1);
+	this.props.fetchPeople(this.props.currentPage+1);
+	console.log("The new page is 1 more than above");
+}
+
+trial(){
+	console.log("For the trial");
 }
 
 renderPeople(peopleprops){
@@ -48,27 +72,33 @@ renderPeople(peopleprops){
 
 		return peopleprops.items.results.map((person) => {
 			return(
-			<li key={person.name} className="result"> {person.name} </li>
+			<li onClick={this.trial} key={person.name} className="result"> {person.name} </li>
 			) });
 	}
 					
 }
 
 render() {
-	console.log("thisisit:",this.props);
+	// console.log("thisisit:",this.props);
 	return(
 		<div className="people">
 			<button className="aurebesh-btn" onClick={this.makeAurebesh}> Aurebesh</button>
 			<ul className="results">
 				{this.renderPeople(this.props)}
 			</ul>
+			<div className="nav">
+				<div onClick={this.prevPage} className="prev"> &lt; </div>
+				<div onClick={this.nextPage} className="next"> &gt; </div>
+			</div>
 		</div>
 	);
 	}
 }
 
 function mapStateToProps(state) {
-	return { items: state.items.all, language: state.language.lang };
+	return { items: state.items.all,
+		currentPage: state.currentPage.page,
+		language: state.language.lang };
 }
 
-export default connect(mapStateToProps, { fetchPeople, swapLanguage })(People);
+export default connect(mapStateToProps, { fetchPeople, swapLanguage, setPage })(People);

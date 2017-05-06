@@ -24,6 +24,7 @@ body{
 	margin: 0;
 	padding: 0;
 	position: relative;
+	font-family: Baloo, arial;
 }
 
 a{
@@ -50,6 +51,7 @@ a{
 	overflow: auto;
 	margin: 0;
 	padding: 0;
+	z-index: 2;
 }
 
 ul.results{
@@ -59,6 +61,19 @@ ul.results{
 }
 li.result{
 	font-size: 24px;
+}
+
+.nav{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 1em;
+	font-size: 26px;
+	.prev, .next{
+		padding: 0.5em;
+		z-index: 3;
+		cursor: pointer;
+	}
 }
 
 .aurebesh-btn{

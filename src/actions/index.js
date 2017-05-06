@@ -5,6 +5,7 @@ export const FETCH_VEHICLES = 'FETCH_VEHICLES';
 export const FETCH_STARSHIPS = 'FETCH_STARSHIPS';
 export const FETCH_PLANETS = 'FETCH_PLANETS';
 export const SWAP_LANGUAGE = 'SWAP_LANGUAGE';
+export const SET_PAGE = 'SET_PAGE';
 
 const ROOT_URL = 'http://swapi.co/api';
 
@@ -16,8 +17,17 @@ export function swapLanguage(lang) {
 	};
 }
 
-export function fetchPeople() {
-	const request = axios.get(`${ROOT_URL}/people/`);
+export function setPage(num) {
+	return {
+		type: SET_PAGE,
+		payload: num,
+	}
+}
+
+export function fetchPeople(num) {
+	//num states the page number. If none was set, load first page
+	if(!num) num=1;
+	const request = axios.get(`${ROOT_URL}/people/?page=${num}`);
 	// request.then(data => data.json()).then((data)=>{console.log("action!",data)});
 	return {
 		type: FETCH_PEOPLE,
