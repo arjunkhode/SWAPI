@@ -52,16 +52,20 @@ export default class App extends Component {
 					<Link to="/people"><li>People</li></Link>
 					<Link to="/planets"><li>Planets</li></Link>
 					<Link to="vehicles"><li>Vehicles</li></Link>
-					<Link to="/starships"><li>Starships</li></Link>
-				</ul>
-			</div>
-			<div className="aurebesh-menu">
-				Choose
-				<ul>
-					<Link to="/people"><li>People</li></Link>
-					<Link to="/planets"><li>Planets</li></Link>
-					<Link to="vehicles"><li>Vehicles</li></Link>
-					<Link to="/starships"><li>Starships</li></Link>
+          <Link to="/starships"><li>Starships</li></Link>
+          <br/>
+          <Link to="/"><li>Home</li></Link> 
+        </ul>
+      </div>
+      <div className="aurebesh-menu">
+        Choose
+        <ul>
+          <Link to="/people"><li>People</li></Link>
+          <Link to="/planets"><li>Planets</li></Link>
+          <Link to="vehicles"><li>Vehicles</li></Link>
+          <Link to="/starships"><li>Starships</li></Link>
+          <br/>
+					<Link to="/"><li>Home</li></Link>
 				</ul>
 			</div>
 		</div>
