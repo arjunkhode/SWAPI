@@ -43,7 +43,7 @@ export default class App extends Component {
 		</div>
       	<img
       	className="menu-icon" onClick={this.openMenu}
-      	src="src/assets/PowderBlueMenuIcon.png" alt="Menu icon"
+      	src="/src/assets/PowderBlueMenuIcon.png" alt="Menu icon"
       	/>
 		<div className="menu-body-div">
 			<div className="english-menu">
