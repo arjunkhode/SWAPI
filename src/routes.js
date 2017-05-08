@@ -8,7 +8,7 @@ import Person from './components/person';
 export default(
 	<Route path="/" component={App} >
 		<IndexRoute component={HeroImage} />
-		<Route path="people" component={People} />
 		<Route path="people/:personid" component={Person} />
+		<Route path="people" component={People} />
 	</Route>
 );
