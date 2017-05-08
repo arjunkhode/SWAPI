@@ -62,6 +62,9 @@ li.result {
     z-index: 3;
     cursor: pointer; }
 
+.person {
+  color: white; }
+
 .aurebesh-btn {
   font-family: Baloo, arial;
   font-weight: 100;
