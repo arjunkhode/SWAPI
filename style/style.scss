@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo');
 $desktop: 860px;
 $tablet: 620px;
-$standard-bgcolor: #1e1e1;
+$standard-bgcolor: #1e1e1e;
 
 @font-face{
 	font-family: "Aurebesh";
@@ -77,15 +77,14 @@ li.result{
 	}
 }
 
-	.person{
-		background: red;
-		width: 100vw;
-		height: 100vh; 
-		overflow: auto;
-		margin: 0;
-		padding: 0;
-		z-index: 3;
-	}
+.person{
+	background: $standard-bgcolor;
+	width: 100vw;
+	height: 100vh; 
+	margin: 0;
+	padding: 0;
+	z-index: 3;
+}
 
 .aurebesh-btn{
 	font-family: Baloo, arial;
