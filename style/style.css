@@ -75,9 +75,9 @@ li.result {
   padding: 0;
   text-align: center;
   box-sizing: border-box;
-  padding: 5em;
-  line-height: 1.9em;
-  padding-top: 8em; }
+  padding: 0;
+  line-height: 1.6em;
+  padding-top: 5em; }
   .person h1 {
     margin: 1em; }
 
