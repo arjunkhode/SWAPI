@@ -34,7 +34,7 @@ export function loadPage(link){
 	// console.log("load page action link:", link, "constructed link:", constructedLink);
 	
 	const request = axios.get(constructedLink);
-	console.log("I loaded axios stuff");
+	// console.log("I loaded axios stuff");
 	return {
 		type: LOAD_PAGE,
 		payload: request,
@@ -49,6 +49,7 @@ export function clearCurrentPage(){
 }
 
 export function setPage(num) {
+	// console.log("page set to:",num);
 	return {
 		type: SET_PAGE,
 		payload: num,

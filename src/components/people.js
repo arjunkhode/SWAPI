@@ -14,6 +14,8 @@ constructor(){
 	this.makeAurebesh = this.makeAurebesh.bind(this);
 	this.prevPage = this.prevPage.bind(this);
 	this.nextPage = this.nextPage.bind(this);
+	this.firstPeoplePage = this.firstPeoplePage.bind(this);
+	this.lastPeoplePage = this.lastPeoplePage.bind(this);
 	this.language = 'english';
 }
 
@@ -21,6 +23,19 @@ componentDidMount(){
 	this.props.fetchPeople(this.props.peoplePage);
 	// let peopleData = {};
 	// stuff.payload.then(data => data.json()).then((data) => {peopleData = data});
+}
+
+firstPeoplePage(){
+	this.props.setPage(1);
+	this.props.setPeoplePage(1);
+ 	this.props.fetchPeople(1);
+}
+
+lastPeoplePage(){
+	let n = Math.floor(this.props.items.count/10);
+	this.props.setPage(n);
+	this.props.setPeoplePage(n);
+ 	this.props.fetchPeople(n);
 }
 
 makeAurebesh(){
@@ -37,9 +52,9 @@ makeAurebesh(){
 	else{
 		resultsdiv.style.fontFamily = "Baloo, Arial";
 		// this.language = 'english';
-		console.log("state lang was:",this.props.language);
+		// console.log("state lang was:",this.props.language);
 		this.props.swapLanguage('english');
-		console.log("state lang was:",this.props.language);
+		// console.log("state lang was:",this.props.language);
 	}
 }
 
@@ -59,7 +74,7 @@ nextPage(){
 	// console.log(maxCount);
 	let currentPage = this.props.currentPage;
 	// console.log("CUrrent page is:",this.props.currentPage);
-	console.log("next page says current people page is:",this.props.peoplePage);
+	// console.log("next page says current people page is:",this.props.peoplePage);
 	if(currentPage+1 <= Math.floor(maxCount / 10)){
 		this.props.setPage(this.props.currentPage + 1);
 		this.props.setPeoplePage(this.props.peoplePage + 1);
@@ -84,7 +99,7 @@ renderPeople(peopleprops){
 }
 
 render() {
-	console.log("thisisit:",this.props);
+	// console.log("thisisit:",this.props);
 	return(
 		<div className="people">
 			<button className="aurebesh-btn" onClick={this.makeAurebesh}> Aurebesh</button>
@@ -92,8 +107,10 @@ render() {
 				{this.renderPeople(this.props)}
 			</ul>
 			<div className="nav">
+				<div onClick={this.firstPeoplePage} className="prev"> 1 </div>
 				<div onClick={this.prevPage} className="prev"> &lt; </div>
 				<div onClick={this.nextPage} className="next"> &gt; </div>
+				<div onClick={this.lastPeoplePage} className="next"> n </div>
 			</div>
 		</div>
 	);

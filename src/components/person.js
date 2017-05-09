@@ -37,9 +37,9 @@ makeAurebesh(){
 	else{
 		resultsdiv.style.fontFamily = "Baloo, Arial";
 		// this.language = 'english';
-		console.log("state lang was:",this.props.language);
+		// console.log("state lang was:",this.props.language);
 		this.props.swapLanguage('english');
-		console.log("state lang was:",this.props.language);
+		// console.log("state lang was:",this.props.language);
 	}
 }
 
@@ -57,7 +57,7 @@ makeAurebesh(){
 	// }
 
 	renderPage(){
-		console.log("Wicked:",this.props);
+		// console.log("Wicked:",this.props);
 		if(this.props.currentDetailPage.name){
 		return (
 
