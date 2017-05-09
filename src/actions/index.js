@@ -7,6 +7,7 @@ export const FETCH_PLANETS = 'FETCH_PLANETS';
 export const SWAP_LANGUAGE = 'SWAP_LANGUAGE';
 export const SET_PAGE = 'SET_PAGE';
 export const LOAD_PAGE = 'LOAD_PAGE';
+export const CLEAR_PAGE = 'CLEAR_PAGE';
 
 const ROOT_URL = 'http://swapi.co/api';
 
@@ -22,11 +23,20 @@ export function loadPage(link){
 	const linkParts = link.split('/');
 	const constructedLink = `${ROOT_URL}/${linkParts[0]}/${linkParts[1]}`;
 	// console.log("load page action link:", link, "constructed link:", constructedLink);
+	
 	const request = axios.get(constructedLink);
+	console.log("I loaded axios stuff");
 	return {
 		type: LOAD_PAGE,
 		payload: request,
 	};
+}
+
+export function clearCurrentPage(){
+	return {
+		type: CLEAR_PAGE,
+		payload: [],
+	}
 }
 
 export function setPage(num) {

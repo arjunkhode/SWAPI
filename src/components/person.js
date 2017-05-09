@@ -3,17 +3,23 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import { loadPage } from '../actions/index';
 import { swapLanguage } from '../actions/index';
+import { clearCurrentPage } from '../actions/index';
 
 class Person extends React.Component{
 	constructor(){
 		super();
-		this.makeAurebesh = this.makeAurebesh.bind(this);
+		this.makeAurebesh = this.makeAurebesh.bind(this);		
 		// this.renderSpecies = this.renderSpecies.bind(this);
 	}
 
 	componentDidMount(){
 		// console.log("params match url:",this.props.params.personid);
-		this.props.loadPage(`people/${this.props.params.personid}`); //Hard coded
+		this.props.loadPage(`people/${this.props.params.personid}`); 
+	}
+
+	// Clear currentpage so prev page doesnt show while new page loads here
+	componentWillUnmount(){
+		this.props.clearCurrentPage();
 	}
 
 
@@ -124,8 +130,9 @@ makeAurebesh(){
 }
 
 function mapStateToProps(state) {
-	return { currentDetailPage: state.currentDetailPage.pageContent,
+	return { 
+	currentDetailPage: state.currentDetailPage ? state.currentDetailPage.pageContent: <div>Loading...</div>,
 	language: state.language.lang };
 }
 
-export default connect(mapStateToProps, { loadPage, swapLanguage } )(Person);
+export default connect(mapStateToProps, { loadPage, swapLanguage, clearCurrentPage } )(Person);
