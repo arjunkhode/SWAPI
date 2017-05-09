@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import { fetchPeople } from '../actions/index';
 import { swapLanguage } from '../actions/index';
 import { setPage } from '../actions/index';
-import { setPeoplePage } from '../actions/index';
+import { setPlanetsPage } from '../actions/index';
 
-class People extends React.Component{
+class Planets extends React.Component{
 
 constructor(){
 	super();
@@ -20,22 +20,22 @@ constructor(){
 }
 
 componentDidMount(){
-	this.props.fetchPeople('people',this.props.peoplePage);
+	this.props.fetchPeople('planets',this.props.peoplePage);
 	// let peopleData = {};
 	// stuff.payload.then(data => data.json()).then((data) => {peopleData = data});
 }
 
 firstPeoplePage(){
 	this.props.setPage(1);
-	this.props.setPeoplePage(1);
- 	this.props.fetchPeople('people',1);
+	this.props.setPlanetsPage(1);
+ 	this.props.fetchPeople('planets',1);
 }
 
 lastPeoplePage(){
 	let n = Math.floor(this.props.items.count/10);
 	this.props.setPage(n);
-	this.props.setPeoplePage(n);
- 	this.props.fetchPeople('people',n);
+	this.props.setPlanetsPage(n);
+ 	this.props.fetchPeople('planets',n);
 }
 
 makeAurebesh(){
@@ -63,8 +63,8 @@ prevPage(){
 	// console.log("CUrrent page is:",this.props.currentPage);
 	if (this.props.currentPage - 1 > 0) {
 	this.props.setPage(this.props.currentPage-1);
-	this.props.setPeoplePage(this.props.peoplePage-1);
-	this.props.fetchPeople('people',this.props.currentPage-1);
+	this.props.setPlanetsPage(this.props.peoplePage-1);
+	this.props.fetchPeople('planets',this.props.currentPage-1);
 	}
 	// console.log("The new page is 1 less than above");
 }
@@ -77,8 +77,8 @@ nextPage(){
 	// console.log("next page says current people page is:",this.props.peoplePage);
 	if(currentPage+1 <= Math.floor(maxCount / 10)){
 		this.props.setPage(this.props.currentPage + 1);
-		this.props.setPeoplePage(this.props.peoplePage + 1);
-		this.props.fetchPeople('people',this.props.currentPage+1);
+		this.props.setPlanetsPage(this.props.peoplePage + 1);
+		this.props.fetchPeople('planets',this.props.currentPage+1);
 	}
 	// console.log("The new page is 1 more than above");
 }
@@ -121,7 +121,7 @@ function mapStateToProps(state) {
 	return { items: state.items.all,
 		currentPage: state.currentPage.page,
 		language: state.language.lang,
-		peoplePage: state.peoplePage.page };
+		planetsPage: state.planetsPage.page };
 }
 
-export default connect(mapStateToProps, { fetchPeople, swapLanguage, setPage, setPeoplePage })(People);
+export default connect(mapStateToProps, { fetchPeople, swapLanguage, setPage, setPlanetsPage })(Planets);

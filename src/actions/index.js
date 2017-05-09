@@ -9,6 +9,7 @@ export const SET_PAGE = 'SET_PAGE';
 export const LOAD_PAGE = 'LOAD_PAGE';
 export const CLEAR_PAGE = 'CLEAR_PAGE';
 export const SET_PEOPLE_PAGE = 'SET_PEOPLE_PAGE';
+export const SET_PLANETS_PAGE = 'SET_PLANETS_PAGE';
 
 const ROOT_URL = 'http://swapi.co/api';
 
@@ -26,8 +27,16 @@ export function setPeoplePage(page){
 		type: SET_PEOPLE_PAGE,
 		payload: page,
 	};
+
+}export function setPlanetsPage(page){
+	// console.log("Updating people page:",page);
+	return {
+		type: SET_PLANETS_PAGE,
+		payload: page,
+	};
 }
 
+// load Person
 export function loadPage(link){
 	const linkParts = link.split('/');
 	const constructedLink = `${ROOT_URL}/${linkParts[0]}/${linkParts[1]}`;
@@ -56,10 +65,10 @@ export function setPage(num) {
 	}
 }
 
-export function fetchPeople(num) {
+export function fetchPeople(identifier,num) {
 	//num states the page number. If none was set, load first page
 	if(!num) num=1;
-	const request = axios.get(`${ROOT_URL}/people/?page=${num}`);
+	const request = axios.get(`${ROOT_URL}/${identifier}/?page=${num}`);
 	// request.then(data => data.json()).then((data)=>{console.log("action!",data)});
 	return {
 		type: FETCH_PEOPLE,
@@ -73,8 +82,11 @@ export function fetchVehicles() {
 		payload: request,
 	};
 }
-export function fetchPlanets() {
-	const request = fetch(`${ROOT_URL}/Planets`);
+export function fetchPlanets(num) {
+	//num states the page number. If none was set, load first page
+	if(!num) num=1;
+	const request = axios.get(`${ROOT_URL}/planets/?page=${num}`);
+	// request.then(data => data.json()).then((data)=>{console.log("action!",data)});
 	return {
 		type: FETCH_PLANETS,
 		payload: request,
