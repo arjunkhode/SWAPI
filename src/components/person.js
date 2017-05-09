@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import { loadPage } from '../actions/index';
 
 class Person extends React.Component{
@@ -65,12 +66,6 @@ class Person extends React.Component{
 		</span> 
 		</div>
 
-		<div className="field"> Home World: 
-		<span className="contentValue">
-		{this.props.currentDetailPage.homeworld} 
-		</span> 
-		</div>
-
 		<div className="field"> Mass:
 		<span className="contentValue">
 		{this.props.currentDetailPage.mass} 
@@ -83,7 +78,13 @@ class Person extends React.Component{
 		</span> 
 		</div>
 
+		<div className="field"> 
+			<Link to={this.props.currentDetailPage.homeworld}> 
+			Home World 
+			</Link> 
+		</div>
 
+		<Link className="back" to="/people"> Back to People </Link>
 
 		</div>
 		);

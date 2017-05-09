@@ -93,10 +93,26 @@ li.result{
 	box-sizing: border-box;
 	padding: 5em;
 	line-height: 1.9em;
-	padding-top: 12em;
+	padding-top: 8em;
 	h1{
 		margin: 1em;
 	}
+}
+
+.back{
+	display: block;
+	font-size: 20px;
+	margin: 2em;
+}
+
+.person a{
+	position: relative;
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	z-index: 3;
+	margin: 1em;
+	display: block;
 }
 
 .aurebesh-btn{
