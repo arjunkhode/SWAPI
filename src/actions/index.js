@@ -10,6 +10,8 @@ export const LOAD_PAGE = 'LOAD_PAGE';
 export const CLEAR_PAGE = 'CLEAR_PAGE';
 export const SET_PEOPLE_PAGE = 'SET_PEOPLE_PAGE';
 export const SET_PLANETS_PAGE = 'SET_PLANETS_PAGE';
+export const SET_VEHICLES_PAGE = 'SET_VEHICLES_PAGE';
+export const SET_STARSHIPS_PAGE = 'SET_STARSHIPS_PAGE';
 
 const ROOT_URL = 'http://swapi.co/api';
 
@@ -28,10 +30,28 @@ export function setPeoplePage(page){
 		payload: page,
 	};
 
-}export function setPlanetsPage(page){
+}
+
+export function setPlanetsPage(page){
 	// console.log("Updating people page:",page);
 	return {
 		type: SET_PLANETS_PAGE,
+		payload: page,
+	};
+}
+
+export function setVehiclesPage(page){
+	// console.log("Updating people page:",page);
+	return {
+		type: SET_VEHICLES_PAGE,
+		payload: page,
+	};
+}
+
+export function setStarshipsPage(page){
+	// console.log("Updating people page:",page);
+	return {
+		type: SET_STARSHIPS_PAGE,
 		payload: page,
 	};
 }
@@ -40,6 +60,7 @@ export function setPeoplePage(page){
 export function loadPage(link){
 	const linkParts = link.split('/');
 	const constructedLink = `${ROOT_URL}/${linkParts[0]}/${linkParts[1]}`;
+	console.log("loadpage has this link:",constructedLink);
 	// console.log("load page action link:", link, "constructed link:", constructedLink);
 	
 	const request = axios.get(constructedLink);
@@ -65,6 +86,8 @@ export function setPage(num) {
 	}
 }
 
+// IMPORTANT: This function is named fetchPeople, but
+// performs fetch function for any entity: planets, starships, etc.
 export function fetchPeople(identifier,num) {
 	//num states the page number. If none was set, load first page
 	if(!num) num=1;
@@ -72,30 +95,6 @@ export function fetchPeople(identifier,num) {
 	// request.then(data => data.json()).then((data)=>{console.log("action!",data)});
 	return {
 		type: FETCH_PEOPLE,
-		payload: request,
-	};
-}
-export function fetchVehicles() {
-	const request = fetch(`${ROOT_URL}/vehicles`);
-	return {
-		type: FETCH_VEHICLES,
-		payload: request,
-	};
-}
-export function fetchPlanets(num) {
-	//num states the page number. If none was set, load first page
-	if(!num) num=1;
-	const request = axios.get(`${ROOT_URL}/planets/?page=${num}`);
-	// request.then(data => data.json()).then((data)=>{console.log("action!",data)});
-	return {
-		type: FETCH_PLANETS,
-		payload: request,
-	};
-}
-export function fetchStarships() {
-	const request = fetch(`${ROOT_URL}/Starships`);
-	return {
-		type: FETCH_STARSHIPS,
 		payload: request,
 	};
 }

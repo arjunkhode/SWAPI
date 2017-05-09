@@ -81,6 +81,31 @@ li.result {
   .person h1 {
     margin: 1em; }
 
+.field {
+  height: 1.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: greenyellow; }
+
+.contentValue {
+  color: white;
+  margin: 0.7em; }
+
+.water {
+  position: relative;
+  border-radius: 6px;
+  display: inline-block;
+  height: 20px;
+  width: 200px;
+  background: #3e3e3e; }
+  .water .waterContent {
+    border-radius: 6px;
+    position: absolute;
+    left: 0;
+    height: 18px;
+    background: azure; }
+
 .back {
   display: block;
   font-size: 20px;

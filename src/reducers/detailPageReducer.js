@@ -9,7 +9,7 @@ export default function detailPageReducer(state = INITIAL_STATE, action) {
 		// case LOCATION_CHANGE:
 		// 	return {};
 		case CLEAR_PAGE:
-			console.log("Component unmounted");
+			// console.log("Component unmounted");
 			return { ...state, pageContent: action.payload };
 		case LOAD_PAGE:
 			return { ...state, pageContent: action.payload.data };
