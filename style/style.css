@@ -89,11 +89,10 @@ li.result {
 .person a {
   position: relative;
   text-decoration: none;
-  font-size: 20px;
   color: white;
   z-index: 3;
-  margin: 1em;
-  display: block; }
+  display: block;
+  color: navajowhite; }
 
 .aurebesh-btn {
   font-family: Baloo, arial;

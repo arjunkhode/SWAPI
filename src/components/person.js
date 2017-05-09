@@ -2,10 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import { loadPage } from '../actions/index';
+import { swapLanguage } from '../actions/index';
 
 class Person extends React.Component{
 	constructor(){
 		super();
+		this.makeAurebesh = this.makeAurebesh.bind(this);
 		// this.renderSpecies = this.renderSpecies.bind(this);
 	}
 
@@ -13,6 +15,27 @@ class Person extends React.Component{
 		// console.log("params match url:",this.props.params.personid);
 		this.props.loadPage(`people/${this.props.params.personid}`); //Hard coded
 	}
+
+
+makeAurebesh(){
+	const resultsdiv = document.querySelector('.person');
+	// console.log("The current language from the state is:", this.props.language);
+	if(this.props.language === 'english'){
+		resultsdiv.style.fontFamily = "Aurebesh, Arial";
+		resultsdiv.style.lineHeight = 1.6;
+
+		// this.language = 'aurebesh';
+		// console.log("state lang was:",this.props.language);
+		this.props.swapLanguage('aurebesh');
+	}
+	else{
+		resultsdiv.style.fontFamily = "Baloo, Arial";
+		// this.language = 'english';
+		console.log("state lang was:",this.props.language);
+		this.props.swapLanguage('english');
+		console.log("state lang was:",this.props.language);
+	}
+}
 
 	// renderSpecies(){
 	// 	if(this.props.currentDetailPage.species){
@@ -93,6 +116,7 @@ class Person extends React.Component{
 	render(){
 		return(
 		<div className="person">
+		<button className="aurebesh-btn" onClick={this.makeAurebesh}> Aurebesh</button>
 			{this.renderPage(this.props)}
 		</div>
 		);
@@ -100,7 +124,8 @@ class Person extends React.Component{
 }
 
 function mapStateToProps(state) {
-	return { currentDetailPage: state.currentDetailPage.pageContent };
+	return { currentDetailPage: state.currentDetailPage.pageContent,
+	language: state.language.lang };
 }
 
-export default connect(mapStateToProps, { loadPage } )(Person);
+export default connect(mapStateToProps, { loadPage, swapLanguage } )(Person);
