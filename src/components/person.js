@@ -56,8 +56,9 @@ makeAurebesh(){
 	// 	}
 	// }
 
-	renderPage(personProps){
+	renderPage(){
 		console.log("Wicked:",this.props);
+		if(this.props.currentDetailPage.name){
 		return (
 
 		<div className="pageContent">
@@ -116,14 +117,14 @@ makeAurebesh(){
 		<Link className="back" to="/people"> Back to People </Link>
 
 		</div>
-		);
+		); }
 	}
 
 	render(){
 		return(
 		<div className="person">
 		<button className="aurebesh-btn" onClick={this.makeAurebesh}> Aurebesh</button>
-			{this.renderPage(this.props)}
+			{this.renderPage()}
 		</div>
 		);
 	}

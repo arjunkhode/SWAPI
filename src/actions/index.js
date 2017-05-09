@@ -8,6 +8,7 @@ export const SWAP_LANGUAGE = 'SWAP_LANGUAGE';
 export const SET_PAGE = 'SET_PAGE';
 export const LOAD_PAGE = 'LOAD_PAGE';
 export const CLEAR_PAGE = 'CLEAR_PAGE';
+export const SET_PEOPLE_PAGE = 'SET_PEOPLE_PAGE';
 
 const ROOT_URL = 'http://swapi.co/api';
 
@@ -16,6 +17,14 @@ export function swapLanguage(lang) {
 	return {
 		type: SWAP_LANGUAGE,
 		payload: lang,
+	};
+}
+
+export function setPeoplePage(page){
+	console.log("Updating people page:",page);
+	return {
+		type: SET_PEOPLE_PAGE,
+		payload: page,
 	};
 }
 

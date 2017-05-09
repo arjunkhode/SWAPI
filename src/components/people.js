@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { fetchPeople } from '../actions/index';
 import { swapLanguage } from '../actions/index';
 import { setPage } from '../actions/index';
+import { setPeoplePage } from '../actions/index';
 
 class People extends React.Component{
 
@@ -17,7 +18,7 @@ constructor(){
 }
 
 componentDidMount(){
-	this.props.fetchPeople();
+	this.props.fetchPeople(this.props.peoplePage);
 	// let peopleData = {};
 	// stuff.payload.then(data => data.json()).then((data) => {peopleData = data});
 }
@@ -47,6 +48,7 @@ prevPage(){
 	// console.log("CUrrent page is:",this.props.currentPage);
 	if (this.props.currentPage - 1 > 0) {
 	this.props.setPage(this.props.currentPage-1);
+	this.props.setPeoplePage(this.props.peoplePage-1);
 	this.props.fetchPeople(this.props.currentPage-1);
 	}
 	// console.log("The new page is 1 less than above");
@@ -57,8 +59,10 @@ nextPage(){
 	// console.log(maxCount);
 	let currentPage = this.props.currentPage;
 	// console.log("CUrrent page is:",this.props.currentPage);
-	if(currentPage+1 <= Math.floor(maxCount/10)){
-		this.props.setPage(this.props.currentPage+1);
+	console.log("next page says current people page is:",this.props.peoplePage);
+	if(currentPage+1 <= Math.floor(maxCount / 10)){
+		this.props.setPage(this.props.currentPage + 1);
+		this.props.setPeoplePage(this.props.peoplePage + 1);
 		this.props.fetchPeople(this.props.currentPage+1);
 	}
 	// console.log("The new page is 1 more than above");
@@ -99,7 +103,8 @@ render() {
 function mapStateToProps(state) {
 	return { items: state.items.all,
 		currentPage: state.currentPage.page,
-		language: state.language.lang };
+		language: state.language.lang,
+		peoplePage: state.peoplePage.page };
 }
 
-export default connect(mapStateToProps, { fetchPeople, swapLanguage, setPage })(People);
+export default connect(mapStateToProps, { fetchPeople, swapLanguage, setPage, setPeoplePage })(People);
