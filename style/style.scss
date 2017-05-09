@@ -52,7 +52,13 @@ a{
 	overflow: auto;
 	margin: 0;
 	padding: 0;
-	z-index: 2;
+}
+
+.linktoitem{
+	text-decoration: none;
+	color: white;
+	position: relative;
+	z-index: 3;
 }
 
 ul.results{
@@ -83,8 +89,14 @@ li.result{
 	height: 100vh; 
 	margin: 0;
 	padding: 0;
-	z-index: 3;
 	text-align: center;
+	box-sizing: border-box;
+	padding: 5em;
+	line-height: 1.9em;
+	padding-top: 12em;
+	h1{
+		margin: 1em;
+	}
 }
 
 .aurebesh-btn{
@@ -101,6 +113,7 @@ li.result{
 	top: 1.5em;
 	right: 2em;
 	z-index: 2;
+	cursor: pointer;
 }
 
 .menu-icon{
@@ -110,11 +123,12 @@ li.result{
 	height: 2em;
 	width: auto;
 	z-index: 2;
+	cursor: pointer;
 }
 
 .menu-body-div{
 	display: flex;
-	position: fixed;
+	position: absolute;
 	left:0;
 	right:0;
 	top:0;

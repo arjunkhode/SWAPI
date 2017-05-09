@@ -67,12 +67,13 @@ nextPage(){
 renderPeople(peopleprops){
 	// console.log("lee",peopleprops.items.results);
 	if(peopleprops.items.results){
-		
 		if(peopleprops.items.results.length)
-
 		return peopleprops.items.results.map((person) => {
+			let goto = `/${person.url.split('/')[4]}/${person.url.split('/')[5]}`;
 			return(
-			<li onClick={this.trial} key={person.name} className="result"> {person.name} </li>
+			<li onClick={this.trial} 
+			key={person.name} className="result"> 
+			<Link className="linktoitem" to= {goto}> {person.name} </Link></li> 
 			) });
 	}
 					
