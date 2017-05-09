@@ -7,7 +7,9 @@ import Planets from './components/planets';
 import Planet from './components/planet';
 import Person from './components/person';
 import Vehicles from './components/vehicles';
+import Vehicle from './components/vehicle';
 import Starships from './components/starships';
+import Starship from './components/starship';
 
 export default(
 	<Route path="/" component={App} >
@@ -17,8 +19,8 @@ export default(
 		<Route path="planets" component={Planets} />
 		<Route path="planets/:planetid" component={Planet} />
 		<Route path="vehicles" component={Vehicles} />
-		<Route path="vehicles/:vehicleid" component={Person} />
+		<Route path="vehicles/:vehicleid" component={Vehicle} />
 		<Route path="starships" component={Starships} />
-		<Route path="starships/:starshipid" component={Person} />
+		<Route path="starships/:starshipid" component={Starship} />
 	</Route>
 );
