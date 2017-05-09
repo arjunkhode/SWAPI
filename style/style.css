@@ -179,7 +179,11 @@ li.result {
 
   .aurebesh-menu {
     left: 75vw;
-    right: 0; } }
+    right: 0; }
+
+  .person {
+    padding-top: 5em;
+    line-height: 1.9em; } }
 .logo {
   height: 13vh;
   display: block;
