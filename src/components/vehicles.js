@@ -20,7 +20,7 @@ constructor(){
 }
 
 componentDidMount(){
-	this.props.fetchPeople('vehicles',this.props.peoplePage);
+	this.props.fetchPeople('vehicles',this.props.vehiclesPage);
 	// let peopleData = {};
 	// stuff.payload.then(data => data.json()).then((data) => {peopleData = data});
 }
@@ -63,7 +63,7 @@ prevPage(){
 	// console.log("CUrrent page is:",this.props.currentPage);
 	if (this.props.currentPage - 1 > 0) {
 	this.props.setPage(this.props.currentPage-1);
-	this.props.setVehiclesPage(this.props.peoplePage-1);
+	this.props.setVehiclesPage(this.props.vehiclesPage-1);
 	this.props.fetchPeople('vehicles',this.props.currentPage-1);
 	}
 	// console.log("The new page is 1 less than above");
@@ -77,7 +77,7 @@ nextPage(){
 	// console.log("next page says current people page is:",this.props.peoplePage);
 	if(currentPage+1 <= Math.floor(maxCount / 10)){
 		this.props.setPage(this.props.currentPage + 1);
-		this.props.setVehiclesPage(this.props.peoplePage + 1);
+		this.props.setVehiclesPage(this.props.vehiclesPage + 1);
 		this.props.fetchPeople('vehicles',this.props.currentPage+1);
 	}
 	// console.log("The new page is 1 more than above");

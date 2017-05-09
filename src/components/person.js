@@ -109,7 +109,7 @@ makeAurebesh(){
 		</div>
 
 		<div className="field"> 
-			<Link to={`../planets/${this.props.currentDetailPage.homeworld.split('/')[5]}`}> 
+			<Link to={`/planets/${this.props.currentDetailPage.homeworld.split('/')[5]}`}> 
 			Homeworld
 			</Link> 
 		</div>

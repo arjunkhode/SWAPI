@@ -33,7 +33,7 @@ export function setPeoplePage(page){
 }
 
 export function setPlanetsPage(page){
-	// console.log("Updating people page:",page);
+	// console.log("Updating planets page:",page);
 	return {
 		type: SET_PLANETS_PAGE,
 		payload: page,
