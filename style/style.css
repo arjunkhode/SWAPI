@@ -71,6 +71,8 @@ li.result {
   background: #1e1e1e;
   width: 100vw;
   height: 100vh;
+  max-height: 200%;
+  overflow: auto;
   margin: 0;
   padding: 0;
   text-align: center;

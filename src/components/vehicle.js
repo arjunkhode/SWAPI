@@ -61,7 +61,7 @@ makeAurebesh(){
 
 		// console.log("Wichicle:",this.props);
 		if(this.props.currentDetailPage.name){
-			console.log(this.props.currentDetailPage);
+			// console.log(this.props.currentDetailPage);
 		return (
 
 		<div className="pageContent">

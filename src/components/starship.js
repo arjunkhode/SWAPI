@@ -61,7 +61,7 @@ makeAurebesh(){
 
 		// console.log("Wicked:",this.props);
 		if(this.props.currentDetailPage.name){
-			// console.log(this.props.currentDetailPage);
+			console.log("strship",this.props.currentDetailPage);
 		return (
 
 		<div className="pageContent">
@@ -69,14 +69,78 @@ makeAurebesh(){
 		{this.props.currentDetailPage.name} 
 		</h1> 
 
-		<div className="field"> Terrain: 
+		<div className="field"> Model: 
 		<span className="contentValue">
-		{this.props.currentDetailPage.terrain} 
+		{this.props.currentDetailPage.model} 
+		</span> 
+		</div>
+
+		<div className="field"> Manufacturer: 
+		<span className="contentValue">
+		{this.props.currentDetailPage.manufacturer} 
+		</span> 
+		</div>
+
+		<div className="field"> Cost in Credits: 
+		<span className="contentValue">
+		{this.props.currentDetailPage.cost_in_credits} 
+		</span> 
+		</div>
+
+		<div className="field"> Length: 
+		<span className="contentValue">
+		{this.props.currentDetailPage.length} 
+		</span> 
+		</div>
+
+		<div className="field"> MGLT: 
+		<span className="contentValue">
+		{this.props.currentDetailPage.MGLT} 
+		</span> 
+		</div>
+
+		<div className="field"> Cargo Capacity: 
+		<span className="contentValue">
+		{this.props.currentDetailPage.cargo_capacity} 
+		</span> 
+		</div>
+
+		<div className="field"> Consumables: 
+		<span className="contentValue">
+		{this.props.currentDetailPage.consumables} 
+		</span> 
+		</div>
+
+		<div className="field"> Crew: 
+		<span className="contentValue">
+		{this.props.currentDetailPage.crew} 
 		</span> 
 		</div>
 
 
+		<div className="field"> Hyperdrive Rating: 
+		<span className="contentValue">
+		{this.props.currentDetailPage.hyperdrive_rating} 
+		</span> 
+		</div>
 
+		<div className="field"> Max Atmosphering Speed: 
+		<span className="contentValue">
+		{this.props.currentDetailPage.max_atmosphering_speed} 
+		</span> 
+		</div>
+
+		<div className="field"> Passengers: 
+		<span className="contentValue">
+		{this.props.currentDetailPage.passengers} 
+		</span> 
+		</div>
+
+		<div className="field"> Starship Class: 
+		<span className="contentValue">
+		{this.props.currentDetailPage.starship_class} 
+		</span> 
+		</div>
 		<Link className="back" to="/vehicles"> Back to Starships </Link>
 
 		</div>
