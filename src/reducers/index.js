@@ -6,8 +6,8 @@ import detailPageReducer from './detailPageReducer';
 import peoplePageReducer from './peoplePageReducer';
 
 const rootReducer = combineReducers({
-	items: itemReducer,
-	language: langReducer,
+	items: itemReducer, // for contents of people page
+	language: langReducer, // for Aurebesh/english swapping
 	currentPage: currentPageReducer,
 	currentDetailPage: detailPageReducer,
 	peoplePage: peoplePageReducer,

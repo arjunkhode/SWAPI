@@ -21,7 +21,7 @@ export function swapLanguage(lang) {
 }
 
 export function setPeoplePage(page){
-	console.log("Updating people page:",page);
+	// console.log("Updating people page:",page);
 	return {
 		type: SET_PEOPLE_PAGE,
 		payload: page,
