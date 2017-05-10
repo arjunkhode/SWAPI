@@ -37,6 +37,9 @@ makeAurebesh(){
 	if(this.props.language === 'english'){
 		resultsdiv.style.fontFamily = "Aurebesh, Arial";
 		resultsdiv.style.fontSize = "0.8em";
+		if(window.screen.width>620){
+			resultsdiv.style.fontSize = "1em";
+		}
 		resultsdiv.style.lineHeight = '1.6em';
 
 		// this.language = 'aurebesh';
@@ -77,49 +80,51 @@ makeAurebesh(){
 		{this.props.currentDetailPage.name} 
 		</h1> 
 
-		<div className="field"> Rotation Period: 
+		<div className="field"> <span className="labl"> Rotation Period: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.rotation_period} 
 		</span> 
 		</div>
 
-		<div className="field"> Orbital Period: 
+		<div className="field"><span className="labl">  Orbital Period: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.orbital_period} 
 		</span> 
 		</div>
 
-		<div className="field"> Diameter: 
+		<div className="field"> <span className="labl"> Diameter: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.diameter} 
 		</span> 
 		</div>
 
-		<div className="field"> Climate: 
+		<div className="field"> <span className="labl"> Climate: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.climate} 
 		</span> 
 		</div>
 
-		<div className="field"> Gravity: 
+		<div className="field"> <span className="labl"> Gravity: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.gravity} 
 		</span> 
 		</div>
 
-		<div className="field"> Population: 
+		<div className="field"> <span className="labl"> Population: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.population} 
 		</span> 
 		</div>
 
-		<div className="field"> Surface Water: 
-		<div className="contentValue water">
+		<div className="field"> <span className="labl"> Surface Water: </span>
+		<div className="contentValue">
+		<div className="water">
 		<div className="waterContent"> </div>
+		</div>
 		</div> 
 		</div>
 
-		<div className="field"> Terrain: 
+		<div className="field"> <span className="labl"> Terrain: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.terrain} 
 		</span> 

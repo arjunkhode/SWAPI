@@ -40,5 +40,6 @@
     "redux": "^3.0.4",
     "redux-promise": "^0.5.3",
     "webpack": "^2.2.0"
-  }
+  },
+  "homepage":"https://arjunkhode.github.io/SWAPI/"
 }

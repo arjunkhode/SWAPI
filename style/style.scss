@@ -104,18 +104,24 @@ li.result{
 
 .field{
 	height: 3em;
-	display: block;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	color: greenyellow;
+	flex-flow: row wrap;
+}
+.labl{
+	flex: 0 0 auto;
 }
 .contentValue{
+	flex: 0 0 auto;
 	display: block;
 	color: white;
-	margin-bottom: 0.5em;
+	padding-left: 0.5em;
 }
 
 .water{
+	flex: 0 0 auto;
 	position: relative;
 	border-radius: 6px;
 	display: block;
@@ -126,6 +132,8 @@ li.result{
 	.waterContent{
 		border-radius: 6px;
 		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
 		left: 0;
 		height: 8px;
 		background: azure;

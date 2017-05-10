@@ -67,43 +67,43 @@ makeAurebesh(){
 		{this.props.currentDetailPage.name} 
 		</h1> 
 
-		<div className="field"> Birth Year: 
+		<div className="field"> <span className="labl"> Birth Year: </span> 
 		<span className="contentValue">
 		{this.props.currentDetailPage.birth_year} 
 		</span> 
 		</div>
 
-		<div className="field"> Eye Color: 
+		<div className="field"> <span className="labl"> Eye Color: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.eye_color} 
 		</span> 
 		</div>
 
-		<div className="field"> Gender: 
+		<div className="field"> <span className="labl"> Gender: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.gender} 
 		</span> 
 		</div>
 
-		<div className="field"> Hair Color: 
+		<div className="field"> <span className="labl"> Hair Color: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.hair_color} 
 		</span> 
 		</div>
 
-		<div className="field"> Height: 
+		<div className="field"> <span className="labl"> Height: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.height} 
 		</span> 
 		</div>
 
-		<div className="field"> Mass:
+		<div className="field"> <span className="labl"> Mass:</span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.mass} 
 		</span> 
 		</div>
 
-		<div className="field"> Skin Color: 
+		<div className="field"> <span className="labl"> Skin Color: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.skin_color} 
 		</span> 
