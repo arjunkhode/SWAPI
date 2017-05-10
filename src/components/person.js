@@ -31,7 +31,10 @@ makeAurebesh(){
 	if(this.props.language === 'english'){
 		resultsdiv.style.fontFamily = "Aurebesh, Arial";
 		resultsdiv.style.lineHeight = 1.6;
-
+		resultsdiv.style.fontSize = "0.8em";
+		if(window.screen.width>620){
+			resultsdiv.style.fontSize = "1em";
+		}
 		// this.language = 'aurebesh';
 		// console.log("state lang was:",this.props.language);
 		this.props.swapLanguage('aurebesh');

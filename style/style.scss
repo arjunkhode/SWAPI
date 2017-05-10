@@ -107,7 +107,7 @@ li.result{
 }
 
 .field{
-	height: 3em;
+	height: auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -119,7 +119,8 @@ li.result{
 }
 .contentValue{
 	flex: 0 0 100%;
-	display: block;
+	height: auto;
+	display: inline-block;
 	color: white;
 }
 
