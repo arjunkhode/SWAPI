@@ -7,8 +7,13 @@ import HeroImage from './hero-image.js';
 export default class App extends Component {
   constructor() {
   	super();
-  	this.openMenu = this.openMenu.bind(this);
+    this.openMenu = this.openMenu.bind(this);
+  	this.handleSearch = this.handleSearch.bind(this);
   }
+
+handleSearch(){
+  console.log("search was triggered");
+}
 
   openMenu() {
   	const englishMenu = document.querySelector('.english-menu');

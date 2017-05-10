@@ -86,7 +86,8 @@ li.result{
 .person{
 	background: $standard-bgcolor;
 	width: 100vw;
-	height: 100vh; 
+	font-size: 1em;
+	min-height: 100vh;
 	max-height: 200%;
 	overflow: auto;
 	margin: 0;
@@ -102,29 +103,31 @@ li.result{
 }
 
 .field{
-	height: 1.7em;
-	display: flex;
+	height: 3em;
+	display: block;
 	justify-content: center;
 	align-items: center;
 	color: greenyellow;
 }
 .contentValue{
+	display: block;
 	color: white;
-	margin: 0.7em;
+	margin-bottom: 0.5em;
 }
 
 .water{
 	position: relative;
 	border-radius: 6px;
-	display: inline-block;
-	height: 20px;
-	width: 200px;
+	display: block;
+	margin: 0 auto;
+	height: 10px;
+	width: 150px;
 	background: #3e3e3e;
 	.waterContent{
 		border-radius: 6px;
 		position: absolute;
 		left: 0;
-		height: 18px;
+		height: 8px;
 		background: azure;
 	}
 }
@@ -254,6 +257,11 @@ li.result{
 	.person{
 		padding-top: 5em;
 		line-height: 1.9em;
+		font-size: 1em;
+	}
+	.water{
+		width: 200px;
+		height: 20px;
 	}
 }
 
