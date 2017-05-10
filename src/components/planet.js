@@ -15,6 +15,7 @@ class Planet extends React.Component{
 
 	componentDidMount(){
 		// console.log("params match url:",this.props.params.personid);
+		this.language = 'english';	
 		this.props.loadPage(`planets/${this.props.params.planetid}`); 
 	}
 

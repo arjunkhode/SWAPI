@@ -15,6 +15,7 @@ class Person extends React.Component{
 
 	componentDidMount(){
 		// console.log("params match url:",this.props.params.personid);
+		this.language = 'english';	
 		this.props.loadPage(`people/${this.props.params.personid}`); 
 	}
 

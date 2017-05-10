@@ -34,6 +34,7 @@ a{
 
 .app-main{
 	height: 100vh;
+	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
@@ -97,6 +98,9 @@ li.result{
 	padding: 0;
 	line-height: 1.6em;
 	padding-top: 5em;
+	.pageContent{
+		margin: 0 auto;
+	}
 	h1{
 		margin: 1em;
 	}
@@ -111,13 +115,12 @@ li.result{
 	flex-flow: row wrap;
 }
 .labl{
-	flex: 0 0 auto;
+	flex: 0 0 100%;
 }
 .contentValue{
-	flex: 0 0 auto;
+	flex: 0 0 100%;
 	display: block;
 	color: white;
-	padding-left: 0.5em;
 }
 
 .water{
@@ -170,6 +173,7 @@ li.result{
 	right: 2em;
 	z-index: 2;
 	cursor: pointer;
+
 }
 
 .menu-icon{
@@ -266,6 +270,15 @@ li.result{
 		padding-top: 5em;
 		line-height: 1.9em;
 		font-size: 1em;
+	}
+	.labl{
+		flex: 0 0 auto;
+	}
+	.contentValue{
+		flex: 0 0 auto;
+		display: block;
+		color: white;
+		padding-left: 0.5em;
 	}
 	.water{
 		width: 200px;

@@ -15,6 +15,7 @@ class Vehicle extends React.Component{
 
 	componentDidMount(){
 		// console.log("params match url:",this.props.params.personid);
+		this.language = 'english';	
 		this.props.loadPage(`vehicles/${this.props.params.vehicleid}`); 
 	}
 
@@ -71,61 +72,61 @@ makeAurebesh(){
 		{this.props.currentDetailPage.name} 
 		</h1> 
 
-		<div className="field"> Model: 
+		<div className="field"><span className="labl">  Model: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.model} 
 		</span> 
 		</div>
 
-		<div className="field"> Manufacturer: 
+		<div className="field"> <span className="labl"> Manufacturer: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.manufacturer} 
 		</span> 
 		</div>
 
-		<div className="field"> Cost in credits:
+		<div className="field"><span className="labl">  Cost in credits:</span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.cost_in_credits} 
 		</span> 
 		</div>
 
-		<div className="field"> Length: 
+		<div className="field"> <span className="labl"> Length: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.length} 
 		</span> 
 		</div>
 
-		<div className="field"> Cargo Capacity: 
+		<div className="field"> <span className="labl"> Cargo Capacity: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.cargo_capacity} 
 		</span> 
 		</div>
 
-		<div className="field"> Consumables: 
+		<div className="field"> <span className="labl"> Consumables: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.consumables} 
 		</span> 
 		</div>
 
-		<div className="field"> Crew: 
+		<div className="field"> <span className="labl"> Crew: </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.crew} 
 		</span> 
 		</div>
 
-		<div className="field"> Max Atmosphering speed: 
+		<div className="field"> <span className="labl"> Max Atmosphering speed:  </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.max_atmosphering_speed} 
 		</span> 
 		</div>
 
-		<div className="field"> Passengers: 
+		<div className="field"> <span className="labl"> Passengers:  </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.passengers} 
 		</span> 
 		</div>
 
-		<div className="field"> Vehicle Class: 
+		<div className="field"> <span className="labl"> Vehicle Class:  </span>
 		<span className="contentValue">
 		{this.props.currentDetailPage.vehicle_class} 
 		</span> 
