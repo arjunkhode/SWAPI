@@ -147,7 +147,7 @@ makeAurebesh(){
 		{this.props.currentDetailPage.starship_class} 
 		</span> 
 		</div>
-		<Link className="back" to="/vehicles"> Back to Starships </Link>
+		<Link className="back" to="/starships"> Back to Starships </Link>
 
 		</div>
 		); 
