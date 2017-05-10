@@ -86,6 +86,10 @@ li.result {
     margin: 0 auto; }
   .person h1 {
     margin: 1em; }
+  .person .searchResult {
+    color: white;
+    position: relative;
+    z-index: 4; }
 
 .field {
   height: auto;
@@ -181,6 +185,19 @@ li.result {
   left: 0;
   right: 0;
   text-align: center; }
+  .english-menu .search-btn, .english-menu .searchbox, .aurebesh-menu .search-btn, .aurebesh-menu .searchbox {
+    display: block;
+    height: 2em;
+    width: 15em;
+    border-radius: 10px;
+    margin: 0 auto;
+    outline: none; }
+  .english-menu .search-btn, .aurebesh-menu .search-btn {
+    margin-top: 0.3em;
+    background: powderblue; }
+  .english-menu .searchbox, .aurebesh-menu .searchbox {
+    margin-top: 2em;
+    padding: 4px; }
   .english-menu ul, .aurebesh-menu ul {
     list-style: none;
     padding: 1em 0; }

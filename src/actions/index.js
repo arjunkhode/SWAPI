@@ -12,6 +12,9 @@ export const SET_PEOPLE_PAGE = 'SET_PEOPLE_PAGE';
 export const SET_PLANETS_PAGE = 'SET_PLANETS_PAGE';
 export const SET_VEHICLES_PAGE = 'SET_VEHICLES_PAGE';
 export const SET_STARSHIPS_PAGE = 'SET_STARSHIPS_PAGE';
+// export const SEARCH = 'SEARCH';
+// export const FETCH_SEARCH_RESULTS = 'FETCH_SEARCH_RESULTS';
+// export const INCREMENT_NO = 'INCREMENT_NO';
 
 const ROOT_URL = 'http://swapi.co/api';
 
@@ -22,6 +25,22 @@ export function swapLanguage(lang) {
 		payload: lang,
 	};
 }
+
+// export function incrementNo(num) {
+// 	console.log("I got the no and am incrementing the foll:",num);
+// 	return {
+// 		type: INCREMENT_NO,
+// 		payload: num+1,
+// 	};
+// }
+
+// export function search(term){
+// 	console.log("search was triggered on",term);
+// 	return{
+// 		type: SEARCH,
+// 		payload: term,
+// 	};
+// }
 
 export function setPeoplePage(page){
 	// console.log("Updating people page:",page);
@@ -98,3 +117,13 @@ export function fetchPeople(identifier,num) {
 		payload: request,
 	};
 }
+
+// export function fetchSearchResults(term) {
+// 	console.log("FetchSR got term as:", term);
+// 		const request = axios.get(`${ROOT_URL}/people/?search=${term}`);
+// 		console.log("search query constructed is:",`${ROOT_URL}/people/?search=${term}`);
+// 		return {
+// 			type: FETCH_SEARCH_RESULTS,
+// 			payload: request,
+// 		};
+// }

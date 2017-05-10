@@ -16,13 +16,18 @@ constructor(){
 	this.nextPage = this.nextPage.bind(this);
 	this.firstPeoplePage = this.firstPeoplePage.bind(this);
 	this.lastPeoplePage = this.lastPeoplePage.bind(this);
-	this.language = 'english';
+	// this.language = 'english';
 }
 
 componentDidMount(){
 	this.props.fetchPeople('vehicles',this.props.vehiclesPage);
 	// let peopleData = {};
 	// stuff.payload.then(data => data.json()).then((data) => {peopleData = data});
+	const resultsdiv = document.querySelector('ul.results');
+	if (this.props.language === 'aurebesh')	{
+	resultsdiv.style.fontFamily = "Aurebesh, Arial";
+	resultsdiv.style.lineHeight = 1.6;
+	}
 }
 
 firstPeoplePage(){
