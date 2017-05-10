@@ -8,7 +8,8 @@ import { clearCurrentPage } from '../actions/index';
 class Starship extends React.Component{
 	constructor(){
 		super();
-		this.makeAurebesh = this.makeAurebesh.bind(this);		
+		this.makeAurebesh = this.makeAurebesh.bind(this);
+		this.language = 'english';		
 		// this.renderSpecies = this.renderSpecies.bind(this);
 	}
 
