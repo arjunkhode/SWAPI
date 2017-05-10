@@ -9,13 +9,22 @@ class Person extends React.Component{
 	constructor(){
 		super();
 		this.makeAurebesh = this.makeAurebesh.bind(this);	
-		this.language = 'english';	
+		// this.language = 'english';	
 		// this.renderSpecies = this.renderSpecies.bind(this);
 	}
 
 	componentDidMount(){
+		const resultsdiv = document.querySelector('.person');
 		// console.log("params match url:",this.props.params.personid);
-		this.language = 'english';	
+		if (this.props.language === 'aurebesh')	{
+			resultsdiv.style.fontFamily = "Aurebesh, Arial";
+			resultsdiv.style.lineHeight = 1.6;
+			resultsdiv.style.fontSize = "0.8em";
+			if(window.screen.width>620){
+				resultsdiv.style.fontSize = "1em";
+			}
+		}
+
 		this.props.loadPage(`people/${this.props.params.personid}`); 
 	}
 

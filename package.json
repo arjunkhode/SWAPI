@@ -7,7 +7,13 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "build": "webpack --progress --colors --watch",
+    "serve": "http-server -o -p 8080",
+    "dev":"webpack-dev-server --hot --colors --progress --open --content-base ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arjunkhode/arjunkhode.github.io.git"
   },
   "author": "Arjun Khode",
   "license": "ISC",

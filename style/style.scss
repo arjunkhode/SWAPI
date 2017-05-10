@@ -104,6 +104,11 @@ li.result{
 	h1{
 		margin: 1em;
 	}
+	.searchResult{
+		color: white;
+		position: relative;
+		z-index: 4;
+	}
 }
 
 .field{
@@ -209,6 +214,26 @@ li.result{
 	left: 0;
 	right: 0;
 	text-align: center;
+
+	.search-btn, .searchbox{
+		display: block;
+		height: 2em;
+		width: 15em;
+		border-radius: 10px;
+		margin: 0 auto;
+		outline: none;
+
+	}
+
+	.search-btn{
+		margin-top: 0.3em;
+		background: powderblue;
+	}
+
+	.searchbox{
+		margin-top: 2em;
+		padding: 4px;
+	}
 
 	ul{
 		list-style: none;

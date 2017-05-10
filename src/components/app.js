@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import {browserHistory} from 'react-router';
 import { Link } from 'react-router';
-import HeroImage from './hero-image.js';
+import { connect } from 'react-redux';
+import HeroImage from './hero-image';
+// import { search } from '../actions/index';
+// import { incrementNo } from '../actions/index';
 // To change bg image for large screen sizes, edit the following line
 // mainImage.src="assets/starwars2.png";
 
@@ -8,12 +12,20 @@ export default class App extends Component {
   constructor() {
   	super();
     this.openMenu = this.openMenu.bind(this);
-  	this.handleSearch = this.handleSearch.bind(this);
+  	// this.handleSearch = this.handleSearch.bind(this);
   }
 
-handleSearch(){
-  console.log("search was triggered");
-}
+// handleSearch(){
+//   const searchbox = document.querySelector('.searchbox');
+//   this.props.search(searchbox.value);
+//   console.log("current no is:", this.props.nom);
+//   if(this.props.nom==0) { this.props.incrementNo(0); browserHistory.push(`/search/0`);}
+//   else{ let temp = this.props.nom + 1;
+//     console.log("temp:",temp);
+//   // this.props.incrementNo(this.props.nom); 
+//   browserHistory.push(`/search/${temp}`); 
+//   }
+// }
 
   openMenu() {
   	const englishMenu = document.querySelector('.english-menu');

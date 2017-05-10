@@ -10,6 +10,7 @@ import Vehicles from './components/vehicles';
 import Vehicle from './components/vehicle';
 import Starships from './components/starships';
 import Starship from './components/starship';
+// import SearchResults from './components/searchResults';
 
 export default(
 	<Route path="/" component={App} >
