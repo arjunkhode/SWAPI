@@ -6,4 +6,4 @@ SWAPI Client
 - npm start
 - http://localhost:8080
 
-![](Screen Shot 2017-05-12 at 10.08.14 PM.png)
+![](https://github.com/arjunkhode/SWAPI/blob/master/Screen%20Shot%202017-05-12%20at%2010.08.14%20PM.png)
